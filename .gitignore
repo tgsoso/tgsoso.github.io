@@ -47,3 +47,5 @@ src/main/resources/dist/*
 /src/main/kotlin/com/sourcegraph/cody/agent/protocol_generated/*
 
 start-server.sh
+/generate_sitemap_advanced.py
+/SITEMAP_README.md
