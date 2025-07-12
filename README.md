@@ -1,4 +1,4 @@
-# FeiJiQun - Telegram频道群组导航
+# 飞机群 - Telegram频道群组导航
 
 飞机群 - Telegram频道群组导航。收录Telegram上的优质频道、群组、机器人，打造一个高质量Telegram导航。2025全网最佳Telegram导航网站，从超过20,000个频道、群组、机器人中精心筛选。Telegram导航，有FeiJiQun就够了！上FeiJiQun，发现更多优质Telegram频道、群组、机器人！
 
@@ -14,11 +14,11 @@
 
 更多信息请查看： [关于网站](https://feijiqun.github.io/about/)
 
-由FeiJiQun打造的高质量Telegram知识库： [TGwiki](https://github.com/feijiqun/tgwiki/) | [传送门](https://feijiqun.github.io/tgwiki/)
+由飞机群打造的高质量Telegram知识库： [TGwiki](https://github.com/feijiqun/tgwiki/) | [传送门](https://feijiqun.github.io/tgwiki/)
 
 ### 赞助我们
 
-FeiJiQun的维护需要一定的人力物力，在此过程中离不开大家的支持。
+飞机群的维护需要一定的人力物力，在此过程中离不开大家的支持。
 
 [点击此处](https://feijiqun.github.io/donate/) 赞助我们。您的赞助是我们前进的动力！
 
