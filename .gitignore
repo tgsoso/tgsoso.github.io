@@ -49,3 +49,4 @@ src/main/resources/dist/*
 start-server.sh
 /generate_sitemap_advanced.py
 /SITEMAP_README.md
+/STYLE_OPTIMIZATION_README.md
