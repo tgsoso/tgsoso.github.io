@@ -75,6 +75,23 @@
     <script>navigator.serviceWorker != null && navigator.serviceWorker.register("/sw.js").then(function (e) {
         console.log("Registered events at scope: ", e.scope)
     })</script>
+    <style>
+    #bulletin_box {
+        border: 1px solid #fff !important;
+        border-radius: 8px !important;
+    }
+    </style>
+    <style>
+    /* 终极覆盖 bulletin_box 里 a.overflowClip_1 的背景色 */
+    .header-big #bulletin_box .carousel-item.active a.overflowClip_1,
+    .header-big #bulletin_box .carousel-item a.overflowClip_1,
+    .header-big #bulletin_box a.overflowClip_1 {
+        background: transparent !important;
+        background-color: transparent !important;
+        background-image: none !important;
+        box-shadow: none !important;
+    }
+    </style>
 </head>
 <body class=io-grey-mode>
 <div id=loading>

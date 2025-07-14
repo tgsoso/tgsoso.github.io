@@ -218,13 +218,52 @@
     </style>
     <style>
     /* 公告栏背景透明，提升可读性 */
-    .bulletin-big,
-    .bulletin-big .card,
-    .bulletin-big .card-body {
+    #bulletin_box, 
+    #bulletin_box * {
         background: transparent !important;
         background-color: transparent !important;
+        background-image: none !important;
         box-shadow: none !important;
     }
+    #bulletin_box *::before,
+    #bulletin_box *::after {
+        background: transparent !important;
+        background-color: transparent !important;
+        background-image: none !important;
+        box-shadow: none !important;
+    }
+    #bulletin_box {
+        border: 1px solid #fff !important;
+        border-radius: 8px !important;
+    }
+    #bulletin_box a,
+    #bulletin_box .overflowClip_1,
+    #bulletin_box .carousel-item,
+    #bulletin_box .carousel-item.active,
+    #bulletin_box .carousel-item.active a {
+        background: transparent !important;
+        background-color: transparent !important;
+        background-image: none !important;
+        box-shadow: none !important;
+    }
+    #bulletin_box a.overflowClip_1,
+    #bulletin_box .carousel-item.active a.overflowClip_1 {
+        background: transparent !important;
+        background-color: transparent !important;
+        background-image: none !important;
+        box-shadow: none !important;
+    }
+    </style>
+    <style>
+        /* 终极覆盖 bulletin_box 里 a.overflowClip_1 的背景色 */
+        .header-big #bulletin_box .carousel-item.active a.overflowClip_1,
+        .header-big #bulletin_box .carousel-item a.overflowClip_1,
+        .header-big #bulletin_box a.overflowClip_1 {
+            background: transparent !important;
+            background-color: transparent !important;
+            background-image: none !important;
+            box-shadow: none !important;
+        }
     </style>
 </head>
 <body class="io-grey-mode background-option-1">
