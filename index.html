@@ -291,7 +291,9 @@
         }
     </style>
     <style>
-        .io-grey-mode .tooltip-inner {
+        .io-grey-mode .tooltip-inner,
+        .io-grey-mode .tooltip .tooltip-inner,
+        .io-grey-mode .tooltip.show .tooltip-inner {
           background-color: #fff !important;
           color: #222 !important;
           box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -302,7 +304,9 @@
           border-top-color: #fff !important;
         }
 
-        .io-black-mode .tooltip-inner {
+        .io-black-mode .tooltip-inner,
+        .io-black-mode .tooltip .tooltip-inner,
+        .io-black-mode .tooltip.show .tooltip-inner {
           background-color: #222 !important;
           color: #fff !important;
           box-shadow: 0 2px 8px rgba(0,0,0,0.16);
@@ -312,6 +316,53 @@
         .io-black-mode .tooltip.bs-tooltip-auto[x-placement^="top"] .arrow::before {
           border-top-color: #222 !important;
         }
+    </style>
+    <style>
+    /* 夜间模式下侧边栏和小圆按钮深色化 */
+    .io-black-mode .sidebar-nav,
+    .io-black-mode .sidebar-nav-inner,
+    .io-black-mode .sidebar-logo,
+    .io-black-mode .sidebar-menu-inner,
+    .io-black-mode .sidebar-item,
+    .io-black-mode .sidebar-menu,
+    .io-black-mode .sidebar-scroll,
+    .io-black-mode .sidebar-menu-inner ul,
+    .io-black-mode .sidebar-menu-inner ul ul,
+    .io-black-mode .sidebar-menu-inner ul li,
+    .io-black-mode .sidebar-menu-inner ul li a {
+        background: #23272f !important;
+        color: #eee !important;
+        border-color: #23272f !important;
+    }
+
+    .io-black-mode .sidebar-logo .logo-light {
+        filter: brightness(0.8);
+    }
+
+    .io-black-mode .sidebar-menu-inner ul li a {
+        color: #eee !important;
+    }
+
+    .io-black-mode .sidebar-menu-inner ul li a:hover,
+    .io-black-mode .sidebar-menu-inner ul li.active > a {
+        background: #2c313a !important;
+        color: #fff !important;
+    }
+
+    .io-black-mode .btn.rounded-circle,
+    .io-black-mode .btn.rounded-circle.kefu,
+    .io-black-mode .btn.rounded-circle.switch-dark-mode,
+    .io-black-mode .btn.rounded-circle.switch-background {
+        background: #23272f !important;
+        color: #eee !important;
+        border: none !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+
+    .io-black-mode .btn.rounded-circle:hover {
+        background: #2c313a !important;
+        color: #fff !important;
+    }
     </style>
 </head>
 <body class="io-grey-mode background-option-1">
