@@ -278,6 +278,41 @@
             min-width: 120px !important;
         }
     </style>
+    <style>
+        .tooltip-inner {
+          background-color: #fff !important;
+          color: #222 !important;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+          border: 1px solid #eee;
+        }
+        .tooltip.bs-tooltip-top .arrow::before,
+        .tooltip.bs-tooltip-auto[x-placement^="top"] .arrow::before {
+          border-top-color: #fff !important;
+        }
+    </style>
+    <style>
+        .io-grey-mode .tooltip-inner {
+          background-color: #fff !important;
+          color: #222 !important;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+          border: 1px solid #eee;
+        }
+        .io-grey-mode .tooltip.bs-tooltip-top .arrow::before,
+        .io-grey-mode .tooltip.bs-tooltip-auto[x-placement^="top"] .arrow::before {
+          border-top-color: #fff !important;
+        }
+
+        .io-black-mode .tooltip-inner {
+          background-color: #222 !important;
+          color: #fff !important;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.16);
+          border: 1px solid #444;
+        }
+        .io-black-mode .tooltip.bs-tooltip-top .arrow::before,
+        .io-black-mode .tooltip.bs-tooltip-auto[x-placement^="top"] .arrow::before {
+          border-top-color: #222 !important;
+        }
+    </style>
 </head>
 <body class="io-grey-mode background-option-1">
 <div id=loading>
