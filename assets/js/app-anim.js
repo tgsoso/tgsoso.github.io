@@ -1,9 +1,7 @@
 (function($){ 
     $(document).ready(function(){
         // 侧栏菜单初始状态设置
-        if(theme.minNav != '1')trigger_resizable(true);
-        // 主题状态
-        switch_mode(); 
+        trigger_resizable(true);
         // 搜索模块
         intoSearch();
         // 粘性页脚
@@ -18,17 +16,12 @@
             additionalMarginBottom: 20
         });
         // 初始化游客自定义数据
-        /*if(theme.isCustomize == '1'){
-            intoSites(false);
-            intoSites(true);
-        }*/
+        // ...existing code...
     });
     $(".panel-body.single img").each(function(i) {
         if (!this.parentNode.href) {
-            if(theme.lazyload)
-                $(this).wrap("<a href='" + $(this).data('src') + "' data-fancybox='fancybox' data-caption='" + this.alt + "'></a>")
-            else
-                $(this).wrap("<a href='" + this.src + "' data-fancybox='fancybox' data-caption='" + this.alt + "'></a>")
+            // ...existing code...
+            $(this).wrap("<a href='" + this.src + "' data-fancybox='fancybox' data-caption='" + this.alt + "'></a>")
         }
     })
     // Enable/Disable Resizable Event
@@ -56,7 +49,7 @@
         });
     });
     $(document).on('click', "a[target!='_blank']", function() {
-        if( theme.loading=='1' && $(this).attr('href') && $(this).attr('href').indexOf("#") != 0 && $(this).attr('href').indexOf("java") != 0 && !$(this).data('fancybox')  && !$(this).data('commentid') && !$(this).hasClass('nofx') ){
+        if( $(this).attr('href') && $(this).attr('href').indexOf("#") != 0 && $(this).attr('href').indexOf("java") != 0 && !$(this).data('fancybox')  && !$(this).data('commentid') && !$(this).hasClass('nofx') ){
             var load = $('<div id="load-loading"></div>');
             $("body").prepend(load);
             load.animate({opacity:'1'},200,'swing').delay(2000).hide(300,function(){ load.remove() });
@@ -198,43 +191,7 @@
         alert("网盘密码已复制，点“确定”进入下载页面。");
     });
 
-    //夜间模式
-    $(document).on('click', '.switch-dark-mode', function(event) {
-        event.preventDefault();
-        $.ajax({
-            url: theme.ajaxurl,
-            type: 'POST',
-            dataType: 'html',
-            data: {
-                mode_toggle: $('body').hasClass('io-black-mode') === true ? 1 : 0,
-                action: 'switch_dark_mode',
-            },
-        })
-        .done(function(response) {
-            $('body').toggleClass('io-black-mode '+theme.defaultclass);
-            switch_mode(); 
-            $("#"+ $('.switch-dark-mode').attr('aria-describedby')).remove();
-            //$('.switch-dark-mode').removeAttr('aria-describedby');
-        })
-    });
-    function switch_mode(){
-        if($('body').hasClass('io-black-mode')){
-            if($(".switch-dark-mode").attr("data-original-title"))
-                $(".switch-dark-mode").attr("data-original-title","日间模式");
-            else
-                $(".switch-dark-mode").attr("title","日间模式");
-            $(".mode-ico").removeClass("icon-night");
-            $(".mode-ico").addClass("icon-light");
-        }
-        else{
-            if($(".switch-dark-mode").attr("data-original-title"))
-                $(".switch-dark-mode").attr("data-original-title","夜间模式");
-            else
-                $(".switch-dark-mode").attr("title","夜间模式");
-            $(".mode-ico").removeClass("icon-light");
-            $(".mode-ico").addClass("icon-night");
-        }
-    }
+    // ...theme color/mode switching code removed...
     //返回顶部
     $(window).scroll(function () {
         if ($(this).scrollTop() >= 50) {
@@ -310,7 +267,7 @@
 
     $('#sidebar-switch').on('click',function(){
         $('#sidebar').removeClass('mini-sidebar');
-	//221024: 调整左导航展开时,点击图标锚定定位失效
+    //221024: 调整左导航展开时,点击图标锚定定位失效
         //$('.sidebar-nav .change-href').attr('href','javascript:;');
 
     }); 
@@ -374,17 +331,17 @@
     function trigger_lsm_mini(isNoAnim){
         if (!$('.header-mini-btn input[type="checkbox"]').prop("checked")) {
             $('.sidebar-nav').removeClass('mini-sidebar');
-	    //221024: 调整左导航展开时,点击图标锚定定位失效
+        //221024: 调整左导航展开时,点击图标锚定定位失效
             //$('.sidebar-nav .change-href').attr('href','javascript:;');
             $('.sidebar-menu ul ul').css("display", "none");
-	    console.log('checked=true');
+        console.log('checked=true');
             if(isNoAnim){
-		console.log('isNoAnim=true');
+        console.log('isNoAnim=true');
                 $('.sidebar-nav').removeClass('animate-nav');
                 $('.sidebar-nav').width(170);
             }
             else{
-		console.log('isNoAnim=false');
+        console.log('isNoAnim=false');
                 $('.sidebar-nav').addClass('animate-nav');
                 $('.sidebar-nav').stop().animate({width: 170},200);
             }
@@ -1038,12 +995,12 @@
     });
     function getUrlInfo(_url,modal){
         $('#modal-new-url-ico').show();
-		$.post("//apiv2.iotheme.cn/webinfo/get.php", { url: _url ,key: theme.apikey },function(data,status){ 
-			if(data.code==0){
+        $.post("//apiv2.iotheme.cn/webinfo/get.php", { url: _url ,key: theme.apikey },function(data,status){ 
+            if(data.code==0){
                 $('#modal-new-url-ico').hide();
-				$("#modal-new-url-summary").addClass('is-invalid');
-			}
-			else{
+                $("#modal-new-url-summary").addClass('is-invalid');
+            }
+            else{
                 $('#modal-new-url-ico').hide();
                 if(data.site_title=="" && data.site_description==""){
                     $("#modal-new-url-summary").addClass('is-invalid');
@@ -1051,11 +1008,11 @@
                     modal.find('[name="url_name"]').val(data.site_title);   
                     modal.find('[name="url_summary"]').val(data.site_description);
                 }
-			}
-		}).fail(function () {
+            }
+        }).fail(function () {
             $('#modal-new-url-ico').hide();
-			$(".refre_msg").html('访问超时，请再试试，或者手动填写').show(200).delay(4000).hide(200);
-		});
+            $(".refre_msg").html('访问超时，请再试试，或者手动填写').show(200).delay(4000).hide(200);
+        });
     }
 })(jQuery);
 function isURL(URL){
@@ -1172,7 +1129,7 @@ function loadingHid(load){
     }
 }
 function ioPopupTips(type, msg, callBack) {
-	var ico = '';
+    var ico = '';
     switch(type) {
         case 1: 
             ico='icon-adopt';
@@ -1188,9 +1145,9 @@ function ioPopupTips(type, msg, callBack) {
             break;
         default: 
     } 
-	var c = type==1 ? 'tips-success' : 'tips-error';
-	var html = '<section class="io-bomb '+c+' io-bomb-sm io-bomb-open">'+
-					'<div class="io-bomb-overlay"></div>'+
+    var c = type==1 ? 'tips-success' : 'tips-error';
+    var html = '<section class="io-bomb '+c+' io-bomb-sm io-bomb-open">'+
+                    '<div class="io-bomb-overlay"></div>'+
                     '<div class="io-bomb-body text-center">'+
                         '<div class="io-bomb-content bg-white px-5"><i class="iconfont '+ico+' icon-8x"></i>'+
                             '<p class="text-md mt-3">'+msg+'</p>'+
@@ -1198,99 +1155,99 @@ function ioPopupTips(type, msg, callBack) {
                     '</div>'+
                 '</section>';
     var tips = $(html);
-	$('body').addClass('modal-open').append(tips);
-	setTimeout(function(){
+    $('body').addClass('modal-open').append(tips);
+    setTimeout(function(){
         $('body').removeClass('modal-open');
         if ($.isFunction(callBack)) callBack(true); 
-		tips.removeClass('io-bomb-open').addClass('io-bomb-close');
-		setTimeout(function(){
-			tips.removeClass('io-bomb-close');
-			setTimeout(function(){
-				tips.remove();
-			}, 200);
-		},400);
-	},2000);
+        tips.removeClass('io-bomb-open').addClass('io-bomb-close');
+        setTimeout(function(){
+            tips.removeClass('io-bomb-close');
+            setTimeout(function(){
+                tips.remove();
+            }, 200);
+        },400);
+    },2000);
 }
 function ioPopup(type, html, maskStyle, btnCallBack) {
-	var maskStyle = maskStyle ? 'style="' + maskStyle + '"' : '';
-	var size = '';
-	if( type == 'big' ){
-		size = 'io-bomb-lg';
-	}else if( type == 'no-padding' ){
-		size = 'io-bomb-nopd';
-	}else if( type == 'cover' ){
-		size = 'io-bomb-cover io-bomb-nopd';
-	}else if( type == 'full' ){
-		size = 'io-bomb-xl';
-	}else if( type == 'small' ){
-		size = 'io-bomb-sm';
-	}else if( type == 'confirm' ){
-		size = 'io-bomb-md';
-	}
-	var template = '\
-	<div class="io-bomb ' + size + ' io-bomb-open">\
-		<div class="io-bomb-overlay" ' + maskStyle + '></div>\
-		<div class="io-bomb-body text-center">\
-			<div class="io-bomb-content bg-white">\
-				'+html+'\
-			</div>\
-			<div class="btn-close-bomb mt-2">\
+    var maskStyle = maskStyle ? 'style="' + maskStyle + '"' : '';
+    var size = '';
+    if( type == 'big' ){
+        size = 'io-bomb-lg';
+    }else if( type == 'no-padding' ){
+        size = 'io-bomb-nopd';
+    }else if( type == 'cover' ){
+        size = 'io-bomb-cover io-bomb-nopd';
+    }else if( type == 'full' ){
+        size = 'io-bomb-xl';
+    }else if( type == 'small' ){
+        size = 'io-bomb-sm';
+    }else if( type == 'confirm' ){
+        size = 'io-bomb-md';
+    }
+    var template = '\
+    <div class="io-bomb ' + size + ' io-bomb-open">\
+        <div class="io-bomb-overlay" ' + maskStyle + '></div>\
+        <div class="io-bomb-body text-center">\
+            <div class="io-bomb-content bg-white">\
+                '+html+'\
+            </div>\
+            <div class="btn-close-bomb mt-2">\
                 <i class="iconfont icon-close-circle"></i>\
             </div>\
-		</div>\
-	</div>\
-	';
-	var popup = $(template);
-	$('body').addClass('modal-open').append(popup);
-	var close = function(){
+        </div>\
+    </div>\
+    ';
+    var popup = $(template);
+    $('body').addClass('modal-open').append(popup);
+    var close = function(){
         $('body').removeClass('modal-open');
-		$(popup).removeClass('io-bomb-open').addClass('io-bomb-close');
-		setTimeout(function(){
-			$(popup).removeClass('io-bomb-close');
-			setTimeout(function(){
-				popup.remove();
-			}, 200);
-		},600);
-	}
-	$(popup).on('click touchstart', '.btn-close-bomb i, .io-bomb-overlay', function(event) {
-		event.preventDefault();
+        $(popup).removeClass('io-bomb-open').addClass('io-bomb-close');
+        setTimeout(function(){
+            $(popup).removeClass('io-bomb-close');
+            setTimeout(function(){
+                popup.remove();
+            }, 200);
+        },600);
+    }
+    $(popup).on('click touchstart', '.btn-close-bomb i, .io-bomb-overlay', function(event) {
+        event.preventDefault();
         if ($.isFunction(btnCallBack)) btnCallBack(true); 
-		close();
-	}); 
-	return popup;
+        close();
+    }); 
+    return popup;
 } 
 function ioConfirm(message, btnCallBack) {
-	var template = '\
-	<div class="io-bomb io-bomb-confirm io-bomb-open">\
-		<div class="io-bomb-overlay"></div>\
-		<div class="io-bomb-body">\
-			<div class="io-bomb-content bg-white">\
-				'+message+'\
+    var template = '\
+    <div class="io-bomb io-bomb-confirm io-bomb-open">\
+        <div class="io-bomb-overlay"></div>\
+        <div class="io-bomb-body">\
+            <div class="io-bomb-content bg-white">\
+                '+message+'\
                 <div class="text-center mt-3">\
                     <button class="btn btn-danger mx-2" onclick="_onclick(true);">确定</button>\
                     <button class="btn btn-light mx-2" onclick="_onclick(false);">取消</button>\
                 </div>\
-			</div>\
-		</div>\
-	</div>\
-	';
-	var popup = $(template);
-	$('body').addClass('modal-open').append(popup);
+            </div>\
+        </div>\
+    </div>\
+    ';
+    var popup = $(template);
+    $('body').addClass('modal-open').append(popup);
     _onclick = function (r) { 
         close();
         if ($.isFunction(btnCallBack)) btnCallBack(r); 
     };
-	var close = function(){
+    var close = function(){
         $('body').removeClass('modal-open');
-		$(popup).removeClass('io-bomb-open').addClass('io-bomb-close');
-		setTimeout(function(){
-			$(popup).removeClass('io-bomb-close');
-			setTimeout(function(){
-				popup.remove();
-			}, 200);
-		},600);
-	}
-	return popup;
+        $(popup).removeClass('io-bomb-open').addClass('io-bomb-close');
+        setTimeout(function(){
+            $(popup).removeClass('io-bomb-close');
+            setTimeout(function(){
+                popup.remove();
+            }, 200);
+        },600);
+    }
+    return popup;
 }
 
 /**

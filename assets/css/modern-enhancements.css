@@ -506,8 +506,8 @@
 
 /* 活跃状态样式 */
 .active {
-    background: var(--primary-gradient) !important;
-    color: white !important;
+    background: transparent !important;
+    color: inherit !important;
 }
 
 /* 错误状态样式 */

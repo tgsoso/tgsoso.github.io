@@ -248,25 +248,6 @@ function enhanceAccessibility() {
     document.body.insertBefore(skipLink, document.body.firstChild);
 }
 
-// 主题切换增强
-function enhanceThemeToggle() {
-    const themeToggle = document.getElementById('yejian');
-    if (themeToggle) {
-        themeToggle.addEventListener('click', function() {
-            // 添加切换动画
-            document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
-            
-            // 添加切换音效（可选）
-            const audio = new Audio('data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT');
-            audio.volume = 0.1;
-            audio.play().catch(() => {}); // 忽略可能的错误
-            
-            setTimeout(() => {
-                document.body.style.transition = '';
-            }, 300);
-        });
-    }
-}
 
 // 添加工具提示增强
 function enhanceTooltips() {
@@ -319,6 +300,5 @@ window.ModernEnhancements = {
     enhanceNavigation,
     optimizePerformance,
     enhanceAccessibility,
-    enhanceThemeToggle,
     enhanceTooltips
 }; 
