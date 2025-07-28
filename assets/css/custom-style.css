@@ -1,3 +1,13 @@
+/* 去除频道导航菜单项的选中背景（首页不高亮） */
+.navbar-nav.site-menu .no-active-bg,
+.navbar-nav.site-menu .no-active-bg:focus,
+.navbar-nav.site-menu .no-active-bg:active,
+.navbar-nav.site-menu .no-active-bg.active,
+.navbar-nav.site-menu .no-active-bg.current {
+    background: none !important;
+    color: inherit !important;
+    box-shadow: none !important;
+}
 /* ===== 现代化样式优化 ===== */
 
 /* 全局字体和基础样式优化 */
