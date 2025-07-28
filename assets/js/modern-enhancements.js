@@ -156,6 +156,35 @@ function enhanceNavigation() {
                 document.body.classList.toggle('sidebar-open');
             });
         }
+        // 添加遮罩点击关闭功能
+        if (!document.getElementById('sidebar-mask')) {
+            const mask = document.createElement('div');
+            mask.id = 'sidebar-mask';
+            mask.style.position = 'fixed';
+            mask.style.top = '0';
+            mask.style.left = '0';
+            mask.style.right = '0';
+            mask.style.bottom = '0';
+            mask.style.background = 'rgba(0,0,0,0.5)';
+            mask.style.zIndex = '1080';
+            mask.style.display = 'none';
+            document.body.appendChild(mask);
+            mask.addEventListener('click', function() {
+                document.body.classList.remove('sidebar-open');
+                // 强制立即隐藏遮罩，防止 observer 延迟
+                mask.style.display = 'none';
+            });
+        }
+        // observer 只根据 sidebar-open 控制遮罩显示
+        const observer = new MutationObserver(() => {
+            const mask = document.getElementById('sidebar-mask');
+            if (document.body.classList.contains('sidebar-open')) {
+                if (mask) mask.style.display = 'block';
+            } else {
+                if (mask) mask.style.display = 'none';
+            }
+        });
+        observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
     }
 }
 
