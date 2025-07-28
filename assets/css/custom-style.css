@@ -524,16 +524,21 @@ footer.main-footer .footer-text a:hover {
         font-size: 2rem;
         margin: 1.5rem 0;
     }
-    
+
+    .header-big.css-color {
+        padding-top: 2.5rem;
+        padding-bottom: 2rem;
+    }
+
     .url-card .url-img {
         width: 40px;
         height: 40px;
     }
-    
+
     .url-card .card-body {
         padding: 1rem;
     }
-    
+
     .header-big .word .wordsub {
         padding: 6px 12px;
         height: 36px;
