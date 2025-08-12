@@ -329,6 +329,7 @@ footer.main-footer .footer-text a:hover {
     overflow: hidden;
     background: white;
     border: 1px solid var(--gray-200);
+    margin-bottom: 1.0rem;
 }
 
 .url-card .url-body:hover {
