@@ -6,6 +6,7 @@
 👉 **推荐 Telegram 中文频道**: [TG 中文导航](https://feijiqun.github.io/)  
 👉 **频道导航**: [频道列表](https://feijiqun.github.io/) | [群组导航](https://feijiqun.github.io/group/) | [机器人导航](https://feijiqun.github.io/robot/)  
 👉 **Telegram 中文知识库**: [TGwiki](https://github.com/feijiqun/tgwiki/)
+
 ## 🌟 **Star 本仓库支持一下吧！** [GitHub 地址](https://github.com/feijiqun/feijiqun.github.io)
 
 ## 📢 热门 Telegram 群组、频道、机器人推荐
@@ -66,19 +67,21 @@
 ---
 
 ## 🔗 关键词覆盖
+
 `Telegram 中文导航`, `Telegram 群组`, `Telegram 频道`, `Telegram 机器人`, `Telegram 工具`, `中文群组导航`, `群组管理`, `机器人大全`, `TG 中文频道`, `虚拟货币投资`, `下载受限内容`, `频道索引`, `中文索引`, `加群验证`, `广告拦截`, `iOS 解除 Telegram 限制`, `Telegram 钱包`
 
 ---
 
-##  👨🏻‍💻 源码使用
+## 👨🏻‍💻 源码使用
 
 本网站已开源，您可以下载源代码或直接fork本仓库创建副本。
 
 **使用/修改网站源代码请遵守 [GPL-3.0开源协议](https://github.com/feijiqun/feijiqun.github.io/blob/main/LICENSE) ，感谢您的配合！**
 
-## 📝  免责声明
+## 📝 免责声明
 
 本网站面向国际服务，可能包含部分敏感内容。**请自觉遵守当地有关法律法规**，所产生的一切后果，本网站概不负责！网站内容收集自互联网，如有内容侵犯了你的权益，请联系删除相关内容。
 
 ---
+
 ## 📨 合作请联系 [@NewLinkAuditBot](https://t.me/NewLinkAuditBot)
