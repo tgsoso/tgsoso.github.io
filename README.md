@@ -86,7 +86,6 @@
 
 ## 📨 合作请联系 [@NewLinkAuditBot](https://t.me/NewLinkAuditBot)
 
----
 ## 频道
 
 | 名称 | 链接 |
@@ -1432,7 +1431,7 @@
 | hs | [@kunsu_bot](https://t.me/kunsu_bot) |
 | Wikipedia Search | [@wiki](https://t.me/wiki) |
 | 全网视频下载 | [@icbcbot](https://t.me/icbcbot) |
-| 区块链助手 - 链上信息查询 | [@QueryTokenBot?start=invite_1023712789](https://t.me/QueryTokenBot?start=invite_1023712789) |
+| 区块链助手 - 链上信息查询 | [@QueryTokenBot](https://t.me/QueryTokenBot?start=invite_1023712789) |
 | Air Pollution | [@AirPollution_Bot](https://t.me/AirPollution_Bot) |
 | so1234bot | [@So1234Bot](https://t.me/So1234Bot) |
 | Dr.Web | [@drwebbot](https://t.me/drwebbot) |
@@ -1496,7 +1495,7 @@
 | URL Shortener 🔗 | [@LinkGeneratorBot](https://t.me/LinkGeneratorBot) |
 | Spam Info Bot |  |
 | Combot | [@combot](https://t.me/combot) |
-| Okpay💰 | [@OkayPayBot?start=creditCardInvite--1023712789](https://t.me/OkayPayBot?start=creditCardInvite--1023712789) |
+| Okpay💰 | [@OkayPayBot](https://t.me/OkayPayBot?start=creditCardInvite--1023712789) |
 | Channel Help |  |
 | Designers Bot | [@design_bot](https://t.me/design_bot) |
 | Quiz Bot | [@QuizBot](https://t.me/QuizBot) |
